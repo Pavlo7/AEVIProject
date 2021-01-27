@@ -1,0 +1,56 @@
+﻿@{
+    ViewBag.Title = "Filter";
+}
+
+<h2>Filter</h2>
+
+@model AEVIWeb.Models.EventModelsViewParam
+
+@{
+    ViewBag.Title = "Filter";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Set the filter of data</h2>
+
+<script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"></script>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+    <fieldset>
+        <div class="editor-label"><span style="float: left"><strong>
+            *@Html.LabelFor(model => model.BeginDate)&nbsp</strong></span>
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.BeginDate)
+            @Html.ValidationMessageFor(model => model.BeginDate)
+        </div>
+        <div class="editor-label"><span style="float: left"><strong>
+            *@Html.LabelFor(model => model.EndDate)&nbsp</strong></span>
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.EndDate)
+            @Html.ValidationMessageFor(model => model.EndDate)
+        </div>
+
+        <div class="editor-label"><span style="float: left"><strong>
+            @Html.LabelFor(model => model.MaskPan)&nbsp</strong></span>
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.MaskPan)
+            @Html.ValidationMessageFor(model => model.MaskPan)
+        </div>
+
+        &nbsp
+        <div><span style="Font-family: Cursive">* - The field is required.</span></div> 
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "List")
+</div>

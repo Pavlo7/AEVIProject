@@ -1,0 +1,62 @@
+﻿@model AEVIWeb.Models.CardModels
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details card</h2>
+
+<fieldset>
+
+    <div class="display-label"><span style="float: left"><strong>PAN: &nbsp</strong></span></div>
+    <div class="display-field">@Model.DispledPan</div>
+    
+    <div class="display-label"><span style="float: left"><strong>Expiration date (YYMM): &nbsp</strong></span></div>
+    <div class="display-field">@Model.Expdate</div>
+
+    <div class="display-label"><span style="float: left"><strong>Company: &nbsp</strong></span></div>
+    <div class="display-field">@Model.Companyname</div>
+
+    <div class="display-label"><span style="float: left"><strong>Email: &nbsp</strong></span></div>
+    <div class="display-field">@Model.Email</div>
+
+    <div class="display-label"><span style="float: left"><strong>Loyalty flag: &nbsp</strong></span></div>
+    <div class="display-field">@Model.Loyaltyflag</div>
+
+    <div class="display-label"><span style="float: left"><strong>Fleet ID flag: &nbsp</strong></span></div>
+    <div class="display-field">@Model.Fleetidflag</div>
+
+    <div class="display-label"><span style="float: left"><strong>Odometer flag: &nbsp</strong></span></div>
+    <div class="display-field">@Model.Odometerflag</div>
+
+    <div class="display-label"><span style="float: left"><strong>Intdesignator: &nbsp</strong></span></div>
+    <div class="display-field">@Model.Intdesignator</div>
+
+    <div class="display-label"><span style="float: left"><strong>Vrn: &nbsp</strong></span></div>
+    <div class="display-field">@Model.Vrn</div>
+
+    <div class="display-label"><span style="float: left"><strong>Drivername: &nbsp</strong></span></div>
+    <div class="display-field">@Model.Drivername</div>
+
+    <div class="display-label"><span style="float: left"><strong>Blocked flag: &nbsp</strong></span></div>
+    <div class="display-field">@Model.Blockflag</div>
+
+    <div class="display-label"><span style="float: left"><strong>Count registers: &nbsp</strong></span></div>
+    <div class="display-field">@Model.CntBind</div>
+
+    <div class="display-label"><span style="float: left"><strong>Fleet ID data: &nbsp</strong></span></div>
+    <div class="display-field">@Model.FleetIdData</div>
+
+    <div class="display-label"><span style="float: left"><strong>Account: &nbsp</strong></span></div>
+    <div class="display-field">@Model.Account</div>
+
+    <div class="display-label"><span style="float: left"><strong>Subaccount: &nbsp</strong></span></div>
+    <div class="display-field">@Model.Subaccount</div>
+
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { pan = Model.Pan }) |
+    @Html.ActionLink("Back to List", "List")
+</p>
+

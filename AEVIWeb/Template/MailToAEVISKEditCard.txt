@@ -1,0 +1,3 @@
+﻿<to>ubl_admin@mail.ru</to>
+<subject>Edit card</subject>
+<body><div>Card PAN: <strong>[MASKEDPAN]</strong> has been edit</div></body>

@@ -1,0 +1,16 @@
+﻿<subject>Pohodlná platba v aute - vymazanie karty</subject>
+<body><p><img src="{SKHeader.jpg}"/></p>
+<p>Vítame Vás vo svete mobilného platenia!</p>
+<p>
+<div>Palivová karta Shell číslo: <strong>[MASKEDPAN]</strong></div>
+<div>bola vymazaná z registračného portálu a nebude možné s ňou zaplatiť</div>
+<div>prostredníctvom mobilnej aplikácie Masterpass™ by Mastercard®.</div>
+</p>
+<p>Stiahnite si aplikáciu Masterpass™ by Mastercard®:</p>
+<p><img src="{QRCode.jpg}"/></p>
+<p>
+<div>V prípade akýchkoľvek otázok nás neváhajte kontaktovať:</div>
+<div>karty-otazky-sk@shell.com</div>
+<div>0800 164 379</div>
+</p>
+<p>Váš Shell Slovakia s.r.o.</p></body>

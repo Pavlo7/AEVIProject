@@ -1,0 +1,3 @@
+﻿<to>тут должен быть емэйл</to>
+<subject>Delete card</subject>
+<body><div>Card PAN: <strong>[MASKEDPAN]</strong> has been deleted</div></body>

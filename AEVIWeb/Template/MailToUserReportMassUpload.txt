@@ -1,0 +1,4 @@
+﻿<subject>Report mass upload</subject>
+<body>
+<p>File has been successfully processed. Details in the attachment.</p>
+</body>

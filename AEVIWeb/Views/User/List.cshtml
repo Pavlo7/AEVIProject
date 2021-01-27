@@ -1,0 +1,61 @@
+﻿@model IEnumerable<AEVIWeb.Models.UserModels>
+@using AEVIWeb.Helpers  
+@using AEVIDomain
+
+@{
+    ViewBag.Title = "List users";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>User list</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+
+@if (ViewData["STRPARAM"] != null)
+{
+<p>
+    @Html.ActionLink("Set filter", "Filter") | @ViewData["STRPARAM"] | @Html.ActionLink("Clear filter", "Clearfilter")
+</p>
+}
+else
+{
+<p>
+    @Html.ActionLink("Set filter", "Filter")
+</p>
+}
+
+<table>
+    <tr>
+        <th></th>
+        <th>UserName</th>
+        <th>Email</th>
+        <th>Login</th>
+        <th>Permission</th>
+        <th>Condition</th>
+        <th>Account state</th>
+    </tr>
+
+@foreach (var item in Model)
+{
+    <tr>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.UserId }) |
+            @Html.ActionLink("Details", "Details", new { id = item.UserId }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.UserId })
+        </td>
+        <td>@item.UserName</td>
+        <td>@item.Email</td>
+        <td>@item.Login</td>
+        <td>@item.Permission</td>
+        <td>@item.Condition</td>
+        <td>@item.AccountState</td>
+    </tr>
+}
+</table>
+
+<p>
+    @Paging.PaginNavigator(this.Html, (int)(Html.ViewData["PageNum"]), (int)(Html.ViewData["ItemsCount"]), 
+        (int)(Html.ViewData["PageSize"]))
+</p>

@@ -1,0 +1,86 @@
+﻿@model IEnumerable<AEVIWeb.Models.CardModels> 
+@using AEVIWeb.Helpers  
+@using AEVIDomain
+
+@{
+    ViewBag.Title = "List";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Card list</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create") | @Html.ActionLink("Block all cards", "BlockListCard")
+</p>
+
+<!--
+@using (Html.BeginForm("Upload", "CardController", FormMethod.Post, new {enctype="multipart/form-data"}))
+{
+    <input type="file" name="upload" />
+    <input type="submit" value="Загрузить" />
+}
+-->
+@if (ViewData["STRPARAM"] != null)
+{
+<p>
+    @Html.ActionLink("Set filter", "Filter") | @ViewData["STRPARAM"] | @Html.ActionLink("Clear filter", "Clearfilter")
+</p>
+}
+else
+{
+<p>
+    @Html.ActionLink("Set filter", "Filter")
+</p>
+}
+
+<table>
+    <tr>
+        <th></th>
+        <th>PAN</th>
+        <th>Exp date (YYMM)</th>
+        <th>Company</th>
+        <th>Email</th>
+        <th>Loy</th>
+        <th>Fleet</th>
+        <th>CM</th>
+        <th>Int des</th>
+        <th>Registered</th>
+        <th>Status</th>
+        <th>Account</th>
+        <th>Subaccount</th>
+    </tr>
+
+@foreach (var item in Model)
+{
+    <tr>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { pan = item.Pan}) |
+            @Html.ActionLink("Details", "Details", new { pan = item.Pan }) |
+            @Html.ActionLink("Delete", "Delete", new { pan = item.Pan })
+        </td>
+        <td>@item.DispledPan</td>
+        <td>@item.Expdate</td>
+        <td>@item.Companyname</td>
+        <td>@item.Email</td>
+        <td>@item.Loyaltyflag</td>
+        <td>@item.Fleetidflag</td>
+        <td>@item.Odometerflag</td>
+        <td>@item.Intdesignator</td>
+        @if (@item.CntBind > 0)
+        {
+            <td>@item.CntBind  @Html.ActionLink("Unregister", "Unregistred", new { pan = item.Pan})</td>
+        }
+        else {<td>@item.CntBind</td>}
+        <td>@item.Status</td>
+        <td>@item.Account</td>
+        <td>@item.Subaccount</td>
+    </tr>
+}
+</table>
+
+
+<p>
+    @Paging.PaginNavigator(this.Html, (int)(Html.ViewData["PageNum"]), (int)(Html.ViewData["ItemsCount"]),
+        (int)(Html.ViewData["PageSize"]))
+</p>
+

@@ -1,0 +1,14 @@
+﻿<p><img src="{header.png}"/></p>
+<p>Vítáme Vás ve světě mobilního placení!</p>
+<p>
+<div>Registrace palivové karty Shell číslo: <strong>[MASKEDPAN]</strong></div>
+<div>byla změněna</div>
+</p>
+<p>Stáhněte si aplikaci Masterpass™ by Mastercard®:</p>
+<p><img src="{QRCode.jpg}"/></p>
+<p>
+<div>V prípade akýchkoľvek otázok nás neváhajte kontaktovať:</div>
+<div>karty-otazky-sk@shell.com</div>
+<div>0800 164 379</div>
+</p>
+<p>Váš Shell Slovakia s.r.o.</p>

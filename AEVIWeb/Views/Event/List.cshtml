@@ -1,0 +1,53 @@
+﻿@model IEnumerable<AEVIWeb.Models.EventModels>
+
+@{
+    ViewBag.Title = "List";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Events list</h2>
+
+@if (ViewData["STRPARAM"] != null)
+{
+<p>
+    @Html.ActionLink("Set filter", "Filter") | @ViewData["STRPARAM"] )
+</p>
+}
+else
+{
+<p>
+    @Html.ActionLink("Set filter", "Filter")
+</p>
+}
+<table>
+    <tr>
+        <th>LocalTime</th>
+        <th>Country</th>
+        <th>Msg</th>
+        <th>ProcCode</th>
+        <th>PAN</th>
+        <th>IFSFCode</th>
+        <th>UTDCode</th>
+        <th>Text</th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>@item.LocalTime</td>
+        <td>@item.Country</td>
+        <td>@item.Msg</td>
+        <td>@item.ProcCode</td>
+        <td>@item.Pan</td>
+        <td>@item.IfsfCode</td>
+        <td>@item.UTDCode</td>
+        <td>@item.Text</td>
+    </tr>
+}
+
+</table>
+
+<p>
+    @Paging.PaginNavigator(this.Html, (int)(Html.ViewData["PageNum"]), (int)(Html.ViewData["ItemsCount"]),
+        (int)(Html.ViewData["PageSize"]))
+</p>
+

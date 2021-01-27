@@ -1,0 +1,34 @@
+﻿@model AEVIWeb.Models.CardModels
+
+@{
+    ViewBag.Title = "Unregistred";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Unregistred card</h2>
+
+<h3>Are you sure you want to unregistred this?</h3>
+<fieldset>
+
+    <div class="display-label"><span style="float: left"><strong>Pan:&nbsp</strong></span></div>
+    <div class="display-field">@Model.DispledPan</div>
+
+    <div class="display-label"><span style="float: left"><strong>Exp date:&nbsp</strong></span></div>
+    <div class="display-field">@Model.Expdate</div>
+
+    <div class="display-label"><span style="float: left"><strong>Company:&nbsp</strong></span></div>
+    <div class="display-field">@Model.Companyname</div>
+
+    <div class="display-label"><span style="float: left"><strong>Email:&nbsp</strong></span></div>
+    <div class="display-field">@Model.Email</div>
+
+</fieldset>
+@using (Html.BeginForm()) {
+    <p>
+        <input type="submit" value="Unregistred" />
+        
+    </p>
+}
+
+<p>@Html.ActionLink("Back to List", "List")<p/>
+

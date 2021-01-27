@@ -1,0 +1,50 @@
+﻿@model IEnumerable<AEVIWeb.Models.ReportModels>
+
+@{
+    ViewBag.Title = "Report";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h4>@String.Format("{0:g}", DateTime.Now)</h4>
+<h2>@ViewData["USERNAME"]</h2>
+
+<table>
+    <tr>
+        <th>
+            DT
+        </th>
+        <th>
+            ActionName
+        </th>
+        <th>
+            Comment
+        </th>
+         <th>
+            User
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @String.Format("{0:g}", item.DT)
+        </td>
+        <td>
+            @item.ActionName
+        </td>
+        <td>
+            @item.Comment
+        </td>
+        <td>
+            @item.User
+        </td>
+    </tr>
+}
+
+
+
+</table>
+
+<p>
+    @Html.ActionLink("Back to report params", "Indexd", new { /* id=item.PrimaryKey */ })
+</p>

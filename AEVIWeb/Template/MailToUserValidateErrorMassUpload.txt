@@ -1,0 +1,4 @@
+﻿<subject>File validation error</subject>
+<body>
+<p>Incorrect data was found in the file. No records were processed. Details in the attachment.</p>
+</body>

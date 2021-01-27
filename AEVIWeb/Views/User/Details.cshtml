@@ -1,0 +1,36 @@
+﻿@model AEVIWeb.Models.UserModels
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details user</h2>
+
+<fieldset>
+     @Html.Hidden("UserId", Model.UserId)
+
+    <div class="display-label"><span style="float: left"><strong>UserName:&nbsp</strong></span></div>
+    <div class="display-field">@Model.UserName</div>
+
+    <div class="display-label"><span style="float: left"><strong>Email:&nbsp</strong></span></div>
+    <div class="display-field">@Model.Email</div>
+
+    <div class="display-label"><span style="float: left"><strong>Permission:&nbsp</strong></span></div>
+    <div class="display-field">@Model.Permission</div>
+
+    <div class="display-label"><span style="float: left"><strong>Condition:&nbsp</strong></span></div>
+    <div class="display-field">@Model.Condition</div>
+
+    <div class="display-label"><span style="float: left"><strong>Login:&nbsp</strong></span></div>
+    <div class="display-field">@Model.Login</div>
+
+    <div class="display-label"><span style="float: left"><strong>Comments:&nbsp</strong></span></div>
+    <div class="display-field">@Model.Comments</div>
+
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new {  id=Model.UserId  }) |
+    @Html.ActionLink("Back to List", "List")
+</p>
+

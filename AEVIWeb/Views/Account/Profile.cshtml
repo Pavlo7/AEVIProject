@@ -1,0 +1,28 @@
+﻿@model AEVIWeb.Models.UserModels
+
+@{
+    ViewBag.Title = "Profile";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>@Model.UserName</h2>
+
+<fieldset>
+
+    <div class="display-label"><span style="float: left;"><strong>Login: &nbsp</strong></span></div>
+    <div class="display-field">@Model.Login</div>
+
+    <div class="display-label"><span style="float: left;"><strong>Email:  &nbsp</strong></span></div>
+    <div class="display-field">@Model.Email</div>
+
+    <div class="display-label"><span style="float: left;"><strong>Permission: &nbsp</strong></span></div>
+    <div class="display-field">@Model.Permission</div>
+
+    <div class="display-label"><span style="float: left;"><strong>Comments: &nbsp</strong></span></div>
+    <div class="display-field">@Model.Comments</div>
+
+</fieldset>
+<p>
+    @Html.ActionLink("Home", "Index", "Home")
+</p>
+

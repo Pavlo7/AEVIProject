@@ -1,0 +1,135 @@
+﻿@model AEVIWeb.Models.CardModels
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Edit card</h2>
+
+<script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"></script>
+
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true)
+    <fieldset>
+        
+        <div class="display-label"><span style="float: left;"><strong>PAN:&nbsp</strong></span></div>
+        <div class="display-field">@Model.DispledPan</div>
+
+        <div class="display-label"><span style="float: left;"><strong>Expiration Date (YYMM):&nbsp</strong></span></div>
+        <div class="display-field">@Model.Expdate</div>
+
+        <div class="editor-label"><span style="float: left;"><strong>
+            *@Html.LabelFor(model => model.Companyname):&nbsp</strong></span>
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Companyname)
+            @Html.ValidationMessageFor(model => model.Companyname)
+        </div>
+
+        <div class="editor-label"><span style="float: left;"><strong>
+            *@Html.LabelFor(model => model.Email):&nbsp</strong></span>
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Email)
+            @Html.ValidationMessageFor(model => model.Email)
+        </div>
+
+        <div class="editor-label"><span style="float: left;"><strong>
+            *@Html.LabelFor(model => model.Loyaltyflag):&nbsp</strong></span>
+        </div>
+        <div class="editor-field">
+            @Html.DropDownListFor(model => model.Loyaltyflag, new[] 
+       { new SelectListItem() { Text = "Yes", Value ="Yes" }, 
+           new SelectListItem() { Text = "No", Value = "No" } })
+            @Html.ValidationMessageFor(model => model.Loyaltyflag)
+        </div>
+
+        <div class="editor-label"><span style="float: left;"><strong>
+            *@Html.LabelFor(model => model.Fleetidflag):&nbsp</strong></span>
+        </div>
+        <div class="editor-field">
+            @Html.DropDownListFor(model => model.Fleetidflag, new[] 
+            { new SelectListItem() { Text = "Yes", Value = "Yes" }, 
+           new SelectListItem() { Text = "No", Value = "No" } })
+            @Html.ValidationMessageFor(model => model.Fleetidflag)
+        </div>
+
+        <div class="editor-label"><span style="float: left;"><strong>
+            *@Html.LabelFor(model => model.Odometerflag):&nbsp</strong></span>
+        </div>
+        <div class="editor-field">
+            @Html.DropDownListFor(model => model.Odometerflag, new[] { 
+           new SelectListItem() { Text = "Yes", Value = "Yes" }, 
+           new SelectListItem() { Text = "No", Value = "No" } })
+            @Html.ValidationMessageFor(model => model.Odometerflag)
+        </div>
+
+        <div class="editor-label"><span style="float: left;"><strong>
+           *@Html.LabelFor(model => model.Intdesignator):&nbsp</strong></span>
+        </div>
+        <div class="editor-field">
+            @Html.DropDownListFor(model => model.Intdesignator, new[] { 
+           new SelectListItem() { Text = "1 - for international use", Value = "1 - for international use" }, 
+           new SelectListItem() { Text = "5 - local use", Value = "5 - local use" } })
+            @Html.ValidationMessageFor(model => model.Intdesignator)
+        </div>
+
+        <div class="editor-label"><span style="float: left;"><strong>
+            @Html.LabelFor(model => model.Vrn):&nbsp</strong></span>
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Vrn)
+            @Html.ValidationMessageFor(model => model.Vrn)
+        </div>
+
+        <div class="editor-label"><span style="float: left;"><strong>
+            @Html.LabelFor(model => model.Drivername):&nbsp</strong></span>
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Drivername)
+            @Html.ValidationMessageFor(model => model.Drivername)
+        </div>
+        
+        <div class="editor-label"><span style="float: left;"><strong>
+            @Html.LabelFor(model => model.Blockflag):&nbsp</strong></span>
+        </div>
+        <div class="editor-field">
+            @Html.DropDownListFor(model => model.Blockflag, new[] {
+           new SelectListItem() { Text = "Yes", Value = "Yes" }, 
+           new SelectListItem() { Text = "No", Value ="No" } })
+            @Html.ValidationMessageFor(model => model.Blockflag)
+        </div>
+
+        <div class="editor-label"><span style="float: left;"><strong>
+            @Html.LabelFor(model => model.Account):&nbsp</strong></span>
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Account)
+            @Html.ValidationMessageFor(model => model.Account)
+        </div>
+
+        <div class="editor-label"><span style="float: left;"><strong>
+            @Html.LabelFor(model => model.Subaccount):&nbsp</strong></span>
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Subaccount)
+            @Html.ValidationMessageFor(model => model.Subaccount)
+        </div>
+       
+       &nbsp
+        <div><span style="Font-family: Cursive">* - The field is required.</span></div> 
+
+    </fieldset>
+    
+     <p>
+            <input type="submit" value="Save" />
+        </p>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "List")
+</div>
+

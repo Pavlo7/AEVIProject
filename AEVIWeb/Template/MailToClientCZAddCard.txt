@@ -1,0 +1,19 @@
+﻿<subject>Pohodlná platba v autě</subject>
+<body><p><img src="{CZHeader.jpg}"/></p>
+<p>Vítáme Vás ve světě mobilního placení!</p>
+<p>
+<div>Číslo palivové karty Shell: <strong>[MASKEDPAN]</strong></div>
+<div>Heslo pro registraci karty: <strong>[PWD]</strong></div>
+</p>
+<p>
+<div>Při registraci své palivové karty Shell zadejte prosím heslo v aplikaci</div>
+<div>Masterpass™ by Mastercard®.</div>
+</p>
+<p>Stáhněte si aplikaci Masterpass™ by Mastercard®:</p>
+<p><img src="{QRCode.jpg}"/></p>
+<p>
+<div>V případě jakýchkoli dotazů nás neváhejte kontaktovat:</div>
+<div>karty-dotazy-cz@shell.com</div>
+<div>800 184 965</div>
+</p>
+<p>Váš Shell Czech republic a.s.</p></body>

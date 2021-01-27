@@ -1,0 +1,16 @@
+﻿<subject>Pohodlná platba v autě - vymazání karty</subject>
+<body><p><img src="{CZHeader.jpg}"/></p>
+<p>Vítáme Vás ve světě mobilního placení!</p>
+<p>
+<div>Palivová karta Shell číslo: <strong>[MASKEDPAN]</strong></div>
+<div>byla vymazána z registračního portálu a nebude možné s ní zaplatit</div>
+<div>prostřednictvím aplikace Masterpass™ by Mastercard®.</div>
+</p>
+<p>Stáhněte si aplikaci Masterpass™ by Mastercard®:</p>
+<p><img src="{QRCode.jpg}"/></p>
+<p>
+<div>V případě jakýchkoli dotazů nás neváhejte kontaktovat:</div>
+<div>karty-dotazy-cz@shell.com</div>
+<div>800 184 965</div>
+</p>
+<p>Váš Shell Czech republic a.s.</p></body>

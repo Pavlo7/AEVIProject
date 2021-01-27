@@ -1,0 +1,4 @@
+﻿<subject>Activate your account</subject>
+<body>
+<p>Your login: [LOGIN] </p>
+<p>To activate the account follow the link: <a href="http://localhost:13945/Account/Update/Activate/[LINKKEY]">Activate</a></p></body>
